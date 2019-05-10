@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Form = () => (
-        <form>
-            <input type='text'></input>
-            <button>Search</button>
-        </form>
+const Form = props => (
+    <form onSubmit={props.getRecipe}>
+        <input type='text' name='recipeName'></input>
+        <button>Search</button>
+    </form>
 );
 
 export default Form;
