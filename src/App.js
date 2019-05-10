@@ -6,9 +6,6 @@ import Recipes from './components/Recipes';
 
 const key = 'e06bca86484f04cca8f2f433e02eeb73'; 
 
-
-
-
 class App extends Component {
 
   state = {
@@ -26,6 +23,7 @@ class App extends Component {
     });
     console.log(this.state.recipes);
   }
+  
   render() {
     return (
       <div className="App">
