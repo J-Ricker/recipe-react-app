@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Form from './components/Form';
-import { regExpLiteral } from '@babel/types';
+import Recipes from './components/Recipes';
 
 const key = 'e06bca86484f04cca8f2f433e02eeb73'; 
 
@@ -33,14 +33,7 @@ class App extends Component {
           <h1 className="App-title">Recipe Search</h1>
         </header>
         <Form getRecipe={this.getRecipe}/>
-        {this.state.recipes.map((recipe) => {
-          return (
-              <div key={recipe.recipe_id}>
-                <img src={recipe.image_url} alt={recipe.title}></img>
-                <p>{recipe.title}</p>
-              </div>
-          )
-        })}
+        <Recipes recipes={this.state.recipes}/>
       </div>
     );
   }
